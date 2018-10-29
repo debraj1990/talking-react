@@ -7,10 +7,12 @@ import SpeechSynthesiserService from './utils/speech-synthesiser-service';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.speakToManoranjan = this.speakToManoranjan.bind(this);
+    this.commandToActionConnector = this.commandToActionConnector.bind(this);
     this.speechApi= new SpeechSynthesiserService();
     this.speechListenApi= new PhraseMatcherService();
-    this.helloVocalText = 'Click and Say "Hello React Baba"';
-    this.welcomeText = 'React Baba welcomes you - Meet the talking React app!!';
+    this.helloVocalText = 'Click and Say "Hello React Guru"';
+    this.welcomeText = 'React Guru welcomes you to the React Quiz game!!';
     this.voiceSettingsComplete = this.speechApi.populateVoiceSettings();
     this.voiceSettingsComplete
     .then(
@@ -79,7 +81,7 @@ class App extends Component {
                 {/* <button className="btn btn-primary btn-lg hide" title="{searchLabel}" onClick="openSearchDialog()">Search Artist</button> */}
                 <i className="fa fa-microphone" title={this.speechApi.micLabel} onClick={this.speakToManoranjan}></i>
                 <div className="heading-text">{this.helloVocalText}
-                  {/* <i className="fa fa-info-circle" title="Info" onClick={this.speechApi.speakText(helloVocalText)}></i> */}
+                  <i className="fa fa-info-circle" title="Info" onClick={this.speechApi.speakText(this.helloVocalText)}></i>
                 </div>
               
             </div>   

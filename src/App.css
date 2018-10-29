@@ -22,8 +22,22 @@
   color: #61dafb;
 }
 
-i {
+i.fa-microphone {
+  font-size: 80px;
+  width: 100px;
+  height: 100px;
+  border-radius: 200px;
+  background: #61DAFB;/* #f00;*/
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 10px #efeeec;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.27);
   cursor: pointer;
+  
+}
+i.fa-microphone:before {
+    color: #f5f5dc;
 }
 
 @keyframes App-logo-spin {

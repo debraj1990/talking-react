@@ -3,7 +3,7 @@ export default class SpeechSynthesiserService {
   voices = [];
   speechSettings = {};
 
-  micLabel = 'Click & Speak to "React Baba"';
+  micLabel = 'Click & Speak to "React Guru"';
   invalidCommandMsg = 'That didn\'t sound right. Can you please give me a valid instruction?';
 
   constructor() { }
@@ -32,6 +32,7 @@ export default class SpeechSynthesiserService {
   }
 
   speakText(speechText) {
+    console.log(speechText);
     let utterThis = new SpeechSynthesisUtterance(speechText);
     // let voiceSettingsComplete = this.populateVoiceSettings();
     // voiceSettingsComplete.then(
