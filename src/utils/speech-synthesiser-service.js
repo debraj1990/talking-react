@@ -31,7 +31,7 @@ export default class SpeechSynthesiserService {
     });
   }
 
-  speakText(speechText) {
+  speakText = (speechText) => (e) => { //speakText(speechText) {
     console.log(speechText);
     let utterThis = new SpeechSynthesisUtterance(speechText);
     // let voiceSettingsComplete = this.populateVoiceSettings();

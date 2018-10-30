@@ -33,8 +33,14 @@ i.fa-microphone {
   justify-content: center;
   border: solid 10px #efeeec;
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.27);
+}
+i.fa {
+  font-size: -webkit-xxx-large;
   cursor: pointer;
-  
+}
+i.fa-info-circle {
+    color: #a6d0d0;
+    font-size: 25px;
 }
 i.fa-microphone:before {
     color: #f5f5dc;

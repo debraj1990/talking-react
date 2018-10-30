@@ -17,13 +17,13 @@ class App extends Component {
     this.voiceSettingsComplete
     .then(
       (val) => {console.log(val);
-        this.speechApi.speakText(this.welcomeText);
-        this.speechApi.speakText("To start, " + this.helloVocalText);
+        this.speechApi.speakText(this.welcomeText)(this);
+        this.speechApi.speakText("To start, " + this.helloVocalText)(this);
       })
       .catch(
         (val) => {console.log(val);
-          this.speechApi.speakText(this.welcomeText);
-          this.speechApi.speakText("To start, " + this.helloVocalText);
+          this.speechApi.speakText(this.welcomeText)(this);
+          this.speechApi.speakText("To start, " + this.helloVocalText)(this);
         });
    }
   speakToManoranjan(event) {
@@ -43,17 +43,17 @@ class App extends Component {
       // console.log("after assignment inputSpeech:"+callerReference.inputSpeech);
       
       switch(voiceResponseObj["speechResult"].toUpperCase()) {
-        case "HELLO MANORANJAN":
-          callerReference.speechApi.speakText(callerReference.searchLabel);
+        case "HELLO REACT GURU":
+          callerReference.speechApi.speakText(callerReference.searchLabel)(callerReference);
           // callerReference.manoranjanSays(callerReference.searchLabel);
           break;
-        case "SEARCH MANORANJAN":
+        case "PLAY REACT GURU":
           // callerReference.openSearchDialog();
           // callerReference.modalService.open(SearchcriteriaComponent, {centered: true, backdropClass: 'light-blue-backdrop'});
           targetElement.previousElementSibling.click();
           break;
         default:
-          callerReference.speechApi.speakText(callerReference.speechApi.invalidCommandMsg);
+          callerReference.speechApi.speakText(callerReference.speechApi.invalidCommandMsg)(callerReference);
           // callerReference.manoranjanSays(callerReference.speechApi.invalidCommandMsg);
           break;
       // callerReference.form.get('email').setValue("example@example.com");

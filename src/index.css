@@ -12,3 +12,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+i.fa-microphone.in-use:before {
+          animation: cursor 1.5s ease infinite;
+}
