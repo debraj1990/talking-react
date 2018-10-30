@@ -11,8 +11,9 @@ class App extends Component {
     this.commandToActionConnector = this.commandToActionConnector.bind(this);
     this.speechApi= new SpeechSynthesiserService();
     this.speechListenApi= new PhraseMatcherService();
-    this.helloVocalText = 'Click and Say "Hello React Guru"';
-    this.welcomeText = 'React Guru welcomes you to the React Quiz game!!';
+    this.helloVocalText = 'Click and Say "Hello React Master"';
+    this.welcomeText = 'React Master welcomes you to the React Quiz game!!';
+    this.quizLabel = 'Hello Dear; You can now test your React knowledge here. To start the quiz, just click on mic & say: "Start Quiz React Master"';
     this.voiceSettingsComplete = this.speechApi.populateVoiceSettings();
     this.voiceSettingsComplete
     .then(
@@ -43,11 +44,11 @@ class App extends Component {
       // console.log("after assignment inputSpeech:"+callerReference.inputSpeech);
       
       switch(voiceResponseObj["speechResult"].toUpperCase()) {
-        case "HELLO REACT GURU":
-          callerReference.speechApi.speakText(callerReference.searchLabel)(callerReference);
+        case "HELLO REACT MASTER":
+          callerReference.speechApi.speakText(callerReference.quizLabel)(callerReference);
           // callerReference.manoranjanSays(callerReference.searchLabel);
           break;
-        case "PLAY REACT GURU":
+        case "START QUIZ REACT MASTER":
           // callerReference.openSearchDialog();
           // callerReference.modalService.open(SearchcriteriaComponent, {centered: true, backdropClass: 'light-blue-backdrop'});
           targetElement.previousElementSibling.click();

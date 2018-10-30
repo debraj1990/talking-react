@@ -3,7 +3,7 @@ export default class SpeechSynthesiserService {
   voices = [];
   speechSettings = {};
 
-  micLabel = 'Click & Speak to "React Guru"';
+  micLabel = 'Click & Speak to "React Master"';
   invalidCommandMsg = 'That didn\'t sound right. Can you please give me a valid instruction?';
 
   constructor() { }
