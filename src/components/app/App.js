@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import PhraseMatcherService from './utils/phrase-matcher-service';
-import SpeechSynthesiserService from './utils/speech-synthesiser-service';
+import logo from '../../assets/logo.svg';
+import './App.scss';
+import PhraseMatcherService from '../../utils/phrase-matcher-service';
+import SpeechSynthesiserService from '../../utils/speech-synthesiser-service';
 
 class App extends Component {
   constructor(props) {
