@@ -3,6 +3,7 @@ import logo from '../../assets/logo.svg';
 import './App.scss';
 import PhraseMatcherService from '../../utils/phrase-matcher-service';
 import SpeechSynthesiserService from '../../utils/speech-synthesiser-service';
+import QuizModal from '../quiz-modal/QuizModal';
 
 class App extends Component {
   constructor(props) {
@@ -84,7 +85,7 @@ class App extends Component {
                 <div className="heading-text">{this.helloVocalText}
                   <i className="fa fa-info-circle" title="Info" onClick={this.speechApi.speakText(this.helloVocalText)}></i>
                 </div>
-              
+              <QuizModal buttonLabel="Start Quiz React Master" className="quiz-dialog"></QuizModal>
             </div>   
         </header>
       </div>
