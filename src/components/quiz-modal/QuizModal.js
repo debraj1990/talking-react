@@ -7,7 +7,9 @@ class QuizModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
+      quizQuestionsConsumed: [],
+      presentedQuestion: {}
     };
 
     this.toggle = this.toggle.bind(this);
@@ -17,6 +19,11 @@ class QuizModal extends React.Component {
     this.setState({
       modal: !this.state.modal
     });
+  }
+
+  randomQuestionGenerator(items) {
+      let randomArrIndex = Math.floor(Math.random()*items.length);
+    //   if()
   }
 
   render() {
