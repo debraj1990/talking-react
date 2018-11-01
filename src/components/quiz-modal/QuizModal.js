@@ -1,7 +1,7 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Container, Row, Col } from 'reactstrap';
 
 class QuizModal extends React.Component {
   constructor(props) {
@@ -58,7 +58,43 @@ class QuizModal extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Play Quiz with React Master</ModalHeader>
           <ModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <Container>
+              <Row>
+                <Col>
+                  <span className={errorMessage === 'notAErrorState' ? 'hidden' : 'bg-red'}>{errorMessage}</span>
+                </Col>
+              </Row>
+              <Row>
+                <Col>.col</Col>
+                <Col>.col</Col>
+                <Col>.col</Col>
+                <Col>.col</Col>
+              </Row>
+              <Row>
+                <Col xs="3">.col-3</Col>
+                <Col xs="auto">.col-auto - variable width content</Col>
+                <Col xs="3">.col-3</Col>
+              </Row>
+              <Row>
+                <Col xs="6">.col-6</Col>
+                <Col xs="6">.col-6</Col>
+              </Row>
+              <Row>
+                <Col xs="6" sm="4">.col-6 .col-sm-4</Col>
+                <Col xs="6" sm="4">.col-6 .col-sm-4</Col>
+                <Col sm="4">.col-sm-4</Col>
+              </Row>
+              <Row>
+                <Col sm={{ size: 6, order: 2, offset: 1 }}>.col-sm-6 .order-sm-2 .offset-sm-1</Col>
+              </Row>
+              <Row>
+                <Col sm="12" md={{ size: 6, offset: 3 }}>.col-sm-12 .col-md-6 .offset-md-3</Col>
+              </Row>
+              <Row>
+                <Col sm={{ size: 'auto', offset: 1 }}>.col-sm-auto .offset-sm-1</Col>
+                <Col sm={{ size: 'auto', offset: 1 }}>.col-sm-auto .offset-sm-1</Col>
+              </Row>
+            </Container>
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle}>Lock Answer</Button>{' '}
