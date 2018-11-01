@@ -53,8 +53,8 @@ class QuizModal extends React.Component {
     const quizObj = this.randomQuestionGenerator(this.props.quizQuestions);
     let errorMessage = quizObj.hasOwnProperty("error") ? quizObj.error : 'notAErrorState'; //'The Quiz is functioning unexpectedly. Please try again after some time.'
     return (
-      <div>
-        <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
+      <div className="quiz-modal">
+        <Button color="danger" id="start-quiz" className="hidden" onClick={this.toggle}>{this.props.buttonLabel}</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Play Quiz with React Master</ModalHeader>
           <ModalBody>
@@ -62,15 +62,23 @@ class QuizModal extends React.Component {
               <Row>
                 <Col>
                   <span className={errorMessage === 'notAErrorState' ? 'hidden' : 'bg-red'}>{errorMessage}</span>
+                  <span>Q # {quizObj.question}</span>
+                  <hr/>
                 </Col>
               </Row>
               <Row>
-                <Col>.col</Col>
-                <Col>.col</Col>
-                <Col>.col</Col>
-                <Col>.col</Col>
+                <Col xs="3">Option A #</Col><Col> {quizObj.optionA}</Col>
               </Row>
-              <Row>
+              <Row xs="3">
+                <Col>Option B #</Col><Col> {quizObj.optionB}</Col>
+              </Row>
+              <Row xs="3">
+                <Col>Option C #</Col><Col> {quizObj.optionC}</Col>
+              </Row>
+              <Row xs="3">
+                <Col>Option D #</Col><Col> {quizObj.optionD}</Col>
+              </Row>
+              {/* <Row>
                 <Col xs="3">.col-3</Col>
                 <Col xs="auto">.col-auto - variable width content</Col>
                 <Col xs="3">.col-3</Col>
@@ -93,7 +101,7 @@ class QuizModal extends React.Component {
               <Row>
                 <Col sm={{ size: 'auto', offset: 1 }}>.col-sm-auto .offset-sm-1</Col>
                 <Col sm={{ size: 'auto', offset: 1 }}>.col-sm-auto .offset-sm-1</Col>
-              </Row>
+              </Row> */}
             </Container>
           </ModalBody>
           <ModalFooter>

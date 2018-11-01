@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../../assets/logo.svg';
 import './App.scss';
+import '../quiz-modal/QuizModal.scss';
 import PhraseMatcherService from '../../utils/phrase-matcher-service';
 import SpeechSynthesiserService from '../../utils/speech-synthesiser-service';
 import QuizModal from '../quiz-modal/QuizModal';
@@ -53,7 +54,8 @@ class App extends Component {
         case "START QUIZ REACT MASTER":
           // callerReference.openSearchDialog();
           // callerReference.modalService.open(SearchcriteriaComponent, {centered: true, backdropClass: 'light-blue-backdrop'});
-          targetElement.previousElementSibling.click();
+          // targetElement.previousElementSibling.click();
+          document.querySelector(".quiz-modal").querySelector("button#start-quiz").click();
           break;
         default:
           callerReference.speechApi.speakText(callerReference.speechApi.invalidCommandMsg)(callerReference);

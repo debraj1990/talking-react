@@ -22,7 +22,7 @@ const QuizQuestions = [
         "imgUrl" : "",
         "optionA" : "Using Higher Order Components (HOC)",
         "optionB" : "React Fragments",
-        "optionC" : "Adding an Extra Wrapper <Div>",
+        "optionC" : "Adding an Extra Wrapper <DIV>",
         "optionD" : "All of the Above",
         "answer" : "optionD"
     },
