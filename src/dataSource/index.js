@@ -26,54 +26,54 @@ const QuizQuestions = [
         "optionD" : "All of the Above",
         "answer" : "optionD"
     },
-    {
-        "question" : "",
-        "imgUrl" : "",
-        "optionA" : "",
-        "optionB" : "",
-        "optionC" : "",
-        "optionD" : ""
-    },
-    {
-        "question" : "",
-        "imgUrl" : "",
-        "optionA" : "",
-        "optionB" : "",
-        "optionC" : "",
-        "optionD" : ""
-    },
-    {
-        "question" : "",
-        "imgUrl" : "",
-        "optionA" : "",
-        "optionB" : "",
-        "optionC" : "",
-        "optionD" : ""
-    },
-    {
-        "question" : "",
-        "imgUrl" : "",
-        "optionA" : "",
-        "optionB" : "",
-        "optionC" : "",
-        "optionD" : ""
-    },
-    {
-        "question" : "",
-        "imgUrl" : "",
-        "optionA" : "",
-        "optionB" : "",
-        "optionC" : "",
-        "optionD" : ""
-    },
-    {
-        "question" : "",
-        "imgUrl" : "",
-        "optionA" : "",
-        "optionB" : "",
-        "optionC" : "",
-        "optionD" : ""
-    },
+    // {
+    //     "question" : "",
+    //     "imgUrl" : "",
+    //     "optionA" : "",
+    //     "optionB" : "",
+    //     "optionC" : "",
+    //     "optionD" : ""
+    // },
+    // {
+    //     "question" : "",
+    //     "imgUrl" : "",
+    //     "optionA" : "",
+    //     "optionB" : "",
+    //     "optionC" : "",
+    //     "optionD" : ""
+    // },
+    // {
+    //     "question" : "",
+    //     "imgUrl" : "",
+    //     "optionA" : "",
+    //     "optionB" : "",
+    //     "optionC" : "",
+    //     "optionD" : ""
+    // },
+    // {
+    //     "question" : "",
+    //     "imgUrl" : "",
+    //     "optionA" : "",
+    //     "optionB" : "",
+    //     "optionC" : "",
+    //     "optionD" : ""
+    // },
+    // {
+    //     "question" : "",
+    //     "imgUrl" : "",
+    //     "optionA" : "",
+    //     "optionB" : "",
+    //     "optionC" : "",
+    //     "optionD" : ""
+    // },
+    // {
+    //     "question" : "",
+    //     "imgUrl" : "",
+    //     "optionA" : "",
+    //     "optionB" : "",
+    //     "optionC" : "",
+    //     "optionD" : ""
+    // },
 ];
 
 export default QuizQuestions;

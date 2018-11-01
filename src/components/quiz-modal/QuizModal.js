@@ -13,6 +13,8 @@ class QuizModal extends React.Component {
     };
 
     this.toggle = this.toggle.bind(this);
+    this.randomQuestionGenerator = this.randomQuestionGenerator.bind(this);
+    this.filterAgainstConsumedList = this.filterAgainstConsumedList.bind(this);
   }
 
   toggle() {
@@ -21,12 +23,35 @@ class QuizModal extends React.Component {
     });
   }
 
+  filterAgainstConsumedList(randomArrIndex, quizQuestionsConsumed, items) {
+    let uniqueFlag = false;
+    if(quizQuestionsConsumed.find(quest => quest === randomArrIndex) !== undefined) {
+      if((randomArrIndex + 1) < items.length) {
+        randomArrIndex += 1;
+        this.filterAgainstConsumedList(randomArrIndex, quizQuestionsConsumed, items);
+      } else if((randomArrIndex - 1) > 0 || (randomArrIndex - 1) === 0) {
+        randomArrIndex -= 1;
+        this.filterAgainstConsumedList(randomArrIndex, quizQuestionsConsumed, items);
+      }
+    } else {
+      uniqueFlag = true;
+      return randomArrIndex;
+    }
+  }
+
   randomQuestionGenerator(items) {
+    if(this.state.quizQuestionsConsumed.length === items.length) {
+      return {"error": "No More Questions!!"};
+    } else {
       let randomArrIndex = Math.floor(Math.random()*items.length);
-    //   if()
+      randomArrIndex = this.filterAgainstConsumedList(randomArrIndex, this.state.quizQuestionsConsumed, items);
+      return items[randomArrIndex];
+    }
   }
 
   render() {
+    const quizObj = this.randomQuestionGenerator(this.props.quizQuestions);
+    let errorMessage = quizObj.hasOwnProperty("error") ? quizObj.error : 'notAErrorState'; //'The Quiz is functioning unexpectedly. Please try again after some time.'
     return (
       <div>
         <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
