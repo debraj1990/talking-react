@@ -45,6 +45,7 @@ class QuizModal extends React.Component {
     } else {
       let randomArrIndex = Math.floor(Math.random()*items.length);
       randomArrIndex = this.filterAgainstConsumedList(randomArrIndex, this.state.quizQuestionsConsumed, items);
+      console.log(randomArrIndex);
       return items[randomArrIndex];
     }
   }
@@ -67,16 +68,17 @@ class QuizModal extends React.Component {
                 </Col>
               </Row>
               <Row>
-                <Col xs="3">Option A #</Col><Col> {quizObj.optionA}</Col>
+                <Col xs="3"><input type="radio" name="selectedAnswer" value="optionA" /> Option A #</Col>
+                <Col> {quizObj.optionA}</Col>
               </Row>
               <Row xs="3">
-                <Col>Option B #</Col><Col> {quizObj.optionB}</Col>
+                <Col><input type="radio" name="selectedAnswer" value="optionB" /> Option B #</Col><Col> {quizObj.optionB}</Col>
               </Row>
               <Row xs="3">
-                <Col>Option C #</Col><Col> {quizObj.optionC}</Col>
+                <Col><input type="radio" name="selectedAnswer" value="optionC" /> Option C #</Col><Col> {quizObj.optionC}</Col>
               </Row>
               <Row xs="3">
-                <Col>Option D #</Col><Col> {quizObj.optionD}</Col>
+                <Col><input type="radio" name="selectedAnswer" value="optionD" /> Option D #</Col><Col> {quizObj.optionD}</Col>
               </Row>
               {/* <Row>
                 <Col xs="3">.col-3</Col>

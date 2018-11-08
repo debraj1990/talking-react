@@ -2,7 +2,7 @@
   "name": "talking-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://localhost/reactProjects/talking-react/build",
+  "homepage": "https://tulikamob.000webhostapp.com/talking-react",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "node-sass": "^4.9.4",

@@ -11,12 +11,9 @@ const Router = () => (
   // <Provider store={store}>
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={App} />
-        {/* <Route path="/issuelisting/:repoOwner/:repoName" component={Issuelisting} /> */}
-        {/* <Route path="/issuedetail/:issueNumber" render={(props) => <div className="issue-detail-page"><IssueHeader {...props} /><IssueDetail {...props} someProp={100} responseIssueList={props.responseIssueList} /></div>} /> */}
-        {/* <Route path="/issuedetail/:issueNumber" component={IssueDetail} /> */}
+        <Route path="/" component={App} />{/* exact*/}
         {/* No routes after this */}
-        <Route component={NotFound} />
+        {/* <Route component={NotFound} /> */}
       </Switch>
     </BrowserRouter>
   // </Provider>
